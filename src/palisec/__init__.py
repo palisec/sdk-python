@@ -3,7 +3,7 @@
 Docs: https://palisec.tech/docs/sdk/python
 """
 
-__version__ = "0.4.8"
+__version__ = "0.4.9"
 
 from .client import DEFAULT_BASE_URL, Palisec, Sender, Transport, redact, safe_op_typed_data, urllib_transport  # noqa: E402
 from .codes import REASON_CODES, RETRYABLE  # noqa: E402

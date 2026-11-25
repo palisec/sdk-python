@@ -46,6 +46,8 @@ def metadata() -> bytes:
             "Classifier: Framework :: AsyncIO",
             "Classifier: Typing :: Typed",
             "Project-URL: Homepage, https://palisec.tech",
+            "Project-URL: Repository, https://github.com/palisec/sdk-python",
+            "Project-URL: Issues, https://github.com/palisec/sdk-python/issues",
             "Project-URL: Documentation, https://palisec.tech/docs/sdk/python",
             "Project-URL: Changelog, https://palisec.tech/changelog",
             "Description-Content-Type: text/markdown",
