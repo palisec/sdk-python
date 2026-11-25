@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "palisec"
+dynamic = ["version"]
+description = "Python client for Palisec: ask before every agent transaction, send only on ALLOW."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Framework :: AsyncIO",
+  "Typing :: Typed",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+keywords = ["palisec", "ai-agents", "authorization", "erc-4337", "robinhood-chain", "web3"]
+
+[project.urls]
+Homepage = "https://palisec.tech"
+Repository = "https://github.com/palisec/sdk-python"
+Issues = "https://github.com/palisec/sdk-python/issues"
+Documentation = "https://palisec.tech/docs/sdk/python"
+Changelog = "https://palisec.tech/changelog"
+
+[tool.hatch.version]
+path = "src/palisec/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/palisec"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE", "pyproject.toml"]
