@@ -32,6 +32,11 @@ REASON_CODES: dict[str, str] = {
     "PS_LOSS_003": "Account value unavailable",
     "PS_PRICE_001": "No reliable price for a token the transaction spends",
     "PS_SIM_002": "The transaction's outflows could not be determined",
+    "PS_TREASURY_001": "Destination not allowed for the project token",
+    "PS_TREASURY_002": "Daily sell cap reached",
+    "PS_TREASURY_003": "Approval of the project token not allowed",
+    "PS_TREASURY_004": "Liquidity removal blocked",
+    "PS_TREASURY_005": "The treasury guard is locked: loosening is rejected",
 }
 
 #: Whether a client may retry the same request after the condition clears.
@@ -65,4 +70,9 @@ RETRYABLE: dict[str, bool] = {
     "PS_LOSS_003": True,
     "PS_PRICE_001": True,
     "PS_SIM_002": True,
+    "PS_TREASURY_001": False,
+    "PS_TREASURY_002": True,
+    "PS_TREASURY_003": False,
+    "PS_TREASURY_004": False,
+    "PS_TREASURY_005": False,
 }

@@ -37,6 +37,12 @@ export const REASON_CODES = {
   // Token spend limits (schema 1.5). Limits themselves reuse PS_BUDGET_001 and PS_HUMAN_001.
   PS_PRICE_001: "No reliable price for a token the transaction spends",
   PS_SIM_002: "The transaction's outflows could not be determined",
+  // Treasury guard (schema 1.6).
+  PS_TREASURY_001: "Destination not allowed for the project token",
+  PS_TREASURY_002: "Daily sell cap reached",
+  PS_TREASURY_003: "Approval of the project token not allowed",
+  PS_TREASURY_004: "Liquidity removal blocked",
+  PS_TREASURY_005: "The treasury guard is locked: loosening is rejected",
 } as const;
 
 export type ReasonCode = keyof typeof REASON_CODES;
@@ -72,4 +78,9 @@ export const RETRYABLE: Record<ReasonCode, boolean> = {
   PS_LOSS_003: true,
   PS_PRICE_001: true,
   PS_SIM_002: true,
+  PS_TREASURY_001: false,
+  PS_TREASURY_002: true,
+  PS_TREASURY_003: false,
+  PS_TREASURY_004: false,
+  PS_TREASURY_005: false,
 };
